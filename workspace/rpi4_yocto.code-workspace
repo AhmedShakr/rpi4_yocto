@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"name": "rpi4_yocto (Root)",
+			"path": ".."
+		},
+		{
+			"name": "docs",
+			"path": "../docs"
+		},
+		{
+			"name": "poky",
+			"path": "../poky"
+		}
+	],
+	"settings": {
+		"editor.detectIndentation": false,
+		"workbench.tree.indent": 30,
+		"editor.insertSpaces": false,
+		"explorer.autoReveal": false,
+		"git.ignoreLimitWarning": true,
+		"search.followSymlinks": false,
+		"git.enabled": false,
+		"C_Cpp.autocomplete": "Disabled",
+		"[shellscript]": {
+			"files.eol": "\n",
+			"files.trimTrailingWhitespace": false
+		},
+		"files.watcherExclude": {
+			"**/build/downloads/**": true,
+			"**/build/sstate-cache/**": true,
+			"**/build/tmp/**": true
+		}
+	}
+}
