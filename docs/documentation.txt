@@ -6,3 +6,14 @@ Building Image
 $ cd poky
 $ . oe-init-build-env
 $ bitbake dropbear
+
+Poky & Build Directory Structure Reference (Lecture 11 - RPi4 64-bit)
+#####################################################################
+- Console Latest Log : poky/build/tmp/log/cooker/raspberrypi4-64/console-latest.log
+- Final Images Dir   : poky/build/tmp/deploy/images/raspberrypi4-64/
+- Final Packages Dir : poky/build/tmp/deploy/rpm/ (or ipk/deb)
+- Final SDK Dir      : poky/build/tmp/deploy/sdk/
+- Target Arch WorkDir: poky/build/tmp/work/cortexa72-poky-linux/<package>/<version>/
+- Machine WorkDir    : poky/build/tmp/work/raspberrypi4_64-poky-linux/
+- Host Native WorkDir: poky/build/tmp/work/x86_64-linux/
+- Recipe Task Logs   : <WORKDIR>/temp/log.task_order, log.do_<task>, run.do_<task>
