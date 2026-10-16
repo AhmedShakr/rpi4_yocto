@@ -1,4 +1,10 @@
-build/
+**/build/*
+!**/build/conf/
+!**/build/conf/local.conf
+!**/build/conf/bblayers.conf
+!**/build/conf/templateconf.cfg
+!**/build/conf/conf-notes.txt
+!**/build/conf/conf-summary.txt
 *.pyc
 *.swp
 *~
