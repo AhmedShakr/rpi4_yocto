@@ -17,3 +17,18 @@ Poky & Build Directory Structure Reference (Lecture 11 - RPi4 64-bit)
 - Machine WorkDir    : poky/build/tmp/work/raspberrypi4_64-poky-linux/
 - Host Native WorkDir: poky/build/tmp/work/x86_64-linux/
 - Recipe Task Logs   : <WORKDIR>/temp/log.task_order, log.do_<task>, run.do_<task>
+
+Cloning Additional Layers (Lecture 12)
+######################################
+- OpenEmbedded Layer Index (scarthgap):
+  https://layers.openembedded.org/layerindex/branch/scarthgap/layers/
+
+- General Command to Clone a Layer:
+  $ cd poky
+  $ git clone <layer_git_url> -b scarthgap
+
+- Cloned Layers for Our RPi4-64 Project:
+  $ cd poky
+  $ git clone https://github.com/openembedded/meta-openembedded.git -b scarthgap
+  $ git clone https://github.com/meta-qt5/meta-qt5.git -b scarthgap
+  $ git clone https://git.yoctoproject.org/meta-raspberrypi -b scarthgap
