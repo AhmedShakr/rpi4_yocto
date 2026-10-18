@@ -32,3 +32,13 @@ Cloning Additional Layers (Lecture 12)
   $ git clone https://github.com/openembedded/meta-openembedded.git -b scarthgap
   $ git clone https://github.com/meta-qt5/meta-qt5.git -b scarthgap
   $ git clone https://git.yoctoproject.org/meta-raspberrypi -b scarthgap
+
+Custom Layer Creation & Configuration (Lecture 13 - meta-moz)
+#############################################################
+- Custom Layer Path      : poky/meta-moz
+- Layer Config File      : poky/meta-moz/conf/layer.conf
+- Layer Collection Name  : BBFILE_COLLECTIONS += "moz"
+- Layer Priority         : BBFILE_PRIORITY_moz = "20" (Highest priority)
+- Layer Compatibility    : LAYERSERIES_COMPAT_moz = "nanbield scarthgap"
+- Layer Dependencies     : LAYERDEPENDS_moz = "core raspberrypi"
+- Verify Active Layers   : $ bitbake-layers show-layers
