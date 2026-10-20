@@ -42,3 +42,18 @@ Custom Layer Creation & Configuration (Lecture 13 - meta-moz)
 - Layer Compatibility    : LAYERSERIES_COMPAT_moz = "nanbield scarthgap"
 - Layer Dependencies     : LAYERDEPENDS_moz = "core raspberrypi"
 - Verify Active Layers   : $ bitbake-layers show-layers
+
+Reference Documentation (Raspberry Pi)
+######################################
+https://www.raspberrypi.com/documentation/
+https://datasheets.raspberrypi.com/bcm2711/bcm2711-peripherals.pdf
+https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf
+
+First Image & UART/SSH Configuration (Lecture 14 - RPi4 64-bit)
+###############################################################
+- Check Dependencies Graph : $ bitbake -g core-image-minimal
+- Generated Build List     : poky/build/pn-buildlist
+- Generated Task Graph     : poky/build/task-depends.dot
+- Build Minimal Image      : $ bitbake core-image-minimal
+- Verify cmdline.txt       : poky/build/tmp/work/raspberrypi4_64-poky-linux/rpi-cmdline/1.0/deploy-rpi-cmdline/bootfiles/cmdline.txt
+- Verify config.txt        : poky/build/tmp/work/raspberrypi4_64-poky-linux/rpi-config/git/deploy-rpi-config/bootfiles/config.txt
