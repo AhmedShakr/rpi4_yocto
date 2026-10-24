@@ -57,3 +57,21 @@ First Image & UART/SSH Configuration (Lecture 14 - RPi4 64-bit)
 - Build Minimal Image      : $ bitbake core-image-minimal
 - Verify cmdline.txt       : poky/build/tmp/work/raspberrypi4_64-poky-linux/rpi-cmdline/1.0/deploy-rpi-cmdline/bootfiles/cmdline.txt
 - Verify config.txt        : poky/build/tmp/work/raspberrypi4_64-poky-linux/rpi-config/git/deploy-rpi-config/bootfiles/config.txt
+
+Cooking (Bitbaking) the image recipe & Flashing (Lecture 15 - RPi4 64-bit)
+########################################################################
+$ cd poky
+$ . ./oe-init-build-env
+$ bitbake -g core-image-minimal
+$ bitbake core-image-minimal
+- Deployed Image Path: poky/build/tmp/deploy/images/raspberrypi4-64/core-image-minimal-raspberrypi4-64.rootfs.wic.bz2
+- Added Package in local.conf: IMAGE_INSTALL:append = " nano "
+- Flashed via bmaptool: $ sudo bmaptool copy core-image-minimal-raspberrypi4-64.rootfs.wic.bz2 /dev/sdb
+
+Serial communication & Network SSH Access
+#########################################
+$ sudo apt-get install minicom bmap-tools
+$ ls /dev/ttyUSB*
+$ sudo minicom -s
+  -> Serial Device: /dev/ttyUSB0 | Bps/Par/Bits: 115200 8N1 | Hardware Flow Control: No
+$ ssh root@192.168.5.144
